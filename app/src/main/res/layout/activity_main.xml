@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/CL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkgcalc">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/btnchamp"
+            android:fontFamily="sans-serif"
+            android:paddingRight="5dp"
+            android:paddingTop="25dp"
+            android:text=""
+            android:textAlignment="textEnd"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Switch
+                android:id="@+id/swh_Pol"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Polo  naise"
+                android:textAppearance="@style/TextAppearance.AppCompat" />
+
+            <Button
+                android:id="@+id/btn_oper1"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="7dp"
+                android:background="@drawable/btnpar"
+                android:fontFamily="sans-serif"
+                android:onClick="showDigit"
+                android:paddingRight="20dp"
+                android:text="("
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btn_oper2"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/btnpar"
+                android:fontFamily="sans-serif"
+                android:onClick="showDigit"
+                android:paddingLeft="20dp"
+                android:text=")"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btn_ac"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="14dp"
+                android:background="@drawable/btnac"
+                android:fontFamily="sans-serif"
+                android:onClick="btnAC"
+                android:text="AC"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_sept"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/btnnum"
+                android:fontFamily="sans-serif"
+                android:onClick="showDigit"
+                android:text="7"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btn_huit"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/btnnum"
+                android:fontFamily="sans-serif"
+                android:onClick="showDigit"
+                android:text="8"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btn_neuf"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_weight="1"
+                android:background="@drawable/btnnum"
+                android:fontFamily="sans-serif"
+                android:onClick="showDigit"
+                android:text="9"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_quatre"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/btnnum"
+                android:fontFamily="sans-serif"
+                android:onClick="showDigit"
+                android:text="4"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btn_cinq"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/btnnum"
+                android:fontFamily="sans-serif"
+                android:onClick="showDigit"
+                android:text="5"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btn_six"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_weight="1"
+                android:background="@drawable/btnnum"
+                android:fontFamily="sans-serif"
+                android:onClick="showDigit"
+                android:text="6"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_un"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/btnnum"
+                android:fontFamily="sans-serif"
+                android:onClick="showDigit"
+                android:text="1"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btn_deux"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/btnnum"
+                android:fontFamily="sans-serif"
+                android:onClick="showDigit"
+                android:text="2"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btn_trois"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_weight="1"
+                android:background="@drawable/btnnum"
+                android:fontFamily="sans-serif"
+                android:onClick="showDigit"
+                android:text="3"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_zero"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/btnnum"
+                android:fontFamily="sans-serif"
+                android:onClick="showDigit"
+                android:text="0"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btn_point"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/btnnum"
+                android:fontFamily="sans-serif"
+                android:onClick="showDigit"
+                android:text="."
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btn_esp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/btnnum"
+                android:fontFamily="sans-serif"
+                android:onClick="showDigit"
+                android:text="Esp"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btn_egal"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_weight="1"
+                android:background="@drawable/btnegal"
+                android:fontFamily="sans-serif"
+                android:onClick="btnEgal"
+                android:text="="
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_plus"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/btnoper"
+                android:fontFamily="sans-serif"
+                android:onClick="showDigit"
+                android:text="+"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btn_moins"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btnoper"
+                android:fontFamily="sans-serif"
+                android:onClick="showDigit"
+                android:text="-"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btn_mult"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btnoper"
+                android:fontFamily="sans-serif"
+                android:onClick="showDigit"
+                android:text="*"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btn_div"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btnoper"
+                android:fontFamily="sans-serif"
+                android:onClick="showDigit"
+                android:text="/"
+                android:textSize="30sp" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
